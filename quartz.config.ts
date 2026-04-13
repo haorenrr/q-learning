@@ -1,5 +1,7 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { ObsidianImageFix } from "./quartz/plugins/transformers/obsidianImage"
+
 
 /**
  * Quartz 4 Configuration
@@ -69,9 +71,14 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.CrawlLinks({ 
+        markdownLinkResolution: "relative",  // 保持相对路径， fix image
+        prettyLinks: true,
+       }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      ObsidianImageFix(), // 自定义的图片处理， fix imageß
+
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

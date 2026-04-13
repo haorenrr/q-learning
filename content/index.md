@@ -1,0 +1,2 @@
+[[course/index.md]]
+
