@@ -10,7 +10,7 @@ import { ObsidianImageFix } from "./quartz/plugins/transformers/obsidianImage"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Quantum Times",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -19,8 +19,26 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: [
+      "private", "templates", ".obsidian",
+    // Quartz 自己要忽略的
+    "misc",
+    "misc/**",
+
+    // Obsidian 系统文件
+    ".obsidian/**",
+    ".trash/**",
+
+    // 按需发布的分类
+    "draft/**",
+    "private/**",
+    "Templates/**",
+
+    // 系统垃圾文件
+    "**/.DS_Store",
+    ],
     defaultDateType: "modified",
+    
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
