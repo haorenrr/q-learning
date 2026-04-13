@@ -18,7 +18,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "haorenrr.github.io",
     ignorePatterns: [
       "private", "templates", ".obsidian",
     // Quartz 自己要忽略的
