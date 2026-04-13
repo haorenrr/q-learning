@@ -18,7 +18,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "haorenrr.github.io",
+    baseUrl: "haorenrr.github.io/q-learning",
     ignorePatterns: [
       "private", "templates", ".obsidian",
     // Quartz 自己要忽略的

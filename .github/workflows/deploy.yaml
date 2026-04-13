@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # Quartz 默认分支是 v4，改成你实际的分支名
+  workflow_dispatch:  # 加这行后，可以在 Actions 页面手动点击触发
+
 
 permissions:
   contents: read
